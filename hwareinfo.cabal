@@ -1,0 +1,29 @@
+name:                hwareinfo
+version:             0.1.0.0
+synopsis:            Library for capturing hardware info
+description:         Please see README.md
+homepage:            http://github.com/VictorDenisov/hwareinfo#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Victor Denisov
+maintainer:          denisovenator@gmail.com
+copyright:           Victor Denisov
+category:            System
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+        GHC-options:      -Wall
+        GHC-prof-options: -auto-all
+
+        hs-source-dirs:   src
+        default-language: Haskell2010
+        build-depends:    base >= 4.7 && < 5
+        exposed-modules:  System.Hardware.Info
+
+executable hwareinfo
+        hs-source-dirs:   src
+        main-is:          Main.hs
+        default-language: Haskell2010
+        build-depends:    base >= 4.7 && < 5
+                        , hwareinfo >= 0.1.0.0
